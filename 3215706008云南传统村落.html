@@ -5,7 +5,7 @@
         name="viewport" 
         content="initial-scale=1,maximum-scale=1,user-scalable=no" 
     />
-    <title>3215706008吴碧华</title>
+    <title>3215706008</title>
     <style>
       html,
       body{
@@ -85,16 +85,12 @@
             outFields: ["地址", "经度", "经度", "批次", "id"],
             popupTemplate: pointyn
         });
-        var flayer2 = new FeatureLayer({
-            url:"https://www.geosceneonline.cn/server/rest/services/Hosted/%E9%81%93%E8%B7%AF%E5%9C%B0%E5%9B%BE/FeatureServer",
-            title: "高速道路图层"   
-        });
 
         const polygonyn2 = {
           "title": "identify功能",
           "content": "<b>fid:</b> {fid}<br><b>省：</b> {省}<br><b>市:</b> {市}<br>"
         }
-        const flayer3 = new FeatureLayer({
+        const flayer2 = new FeatureLayer({
             url:"https://www.geosceneonline.cn/server/rest/services/Hosted/%E5%AE%9E%E9%AA%8C%E5%85%AD/FeatureServer",
             title: "云南省各市区图层",
             outFields: ["省", "市", "fid"],
@@ -102,7 +98,7 @@
         });
         //加入地图
         //map1.layers.add(flayer);
-        map1.addMany([flayer3,flayer2,flayer]);
+        map1.addMany([flayer2,flayer]);
 
         //图层列表
         const layerList = new LayerList({
